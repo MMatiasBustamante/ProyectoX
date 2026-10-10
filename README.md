@@ -1,39 +1,23 @@
 # ProyectoX
 
-Proyecto en equipo construido con [Next.js](https://nextjs.org) (App Router), React, TypeScript y Tailwind CSS 4.
+Next.js (App Router) + TypeScript + Tailwind 4.
 
-## Requisitos
+## Setup
 
-- Node.js >= 20.9
-- [pnpm](https://pnpm.io) 11 (versión fijada en `packageManager`). Con Corepack: `corepack enable`
-
-Usamos **pnpm** como único gestor de paquetes. No uses `npm install` ni `yarn`, para no generar otros lockfiles.
-
-## Puesta en marcha
+Necesitás Node >= 20.9 y pnpm (`corepack enable`). Solo pnpm, nada de npm/yarn.
 
 ```bash
-git clone https://github.com/MMatiasBustamante/ProyectoX.git
-cd ProyectoX
 pnpm install
 pnpm dev
 ```
 
-Abrí [http://localhost:3000](http://localhost:3000). La página principal está en `app/page.tsx`.
+Corre en http://localhost:3000.
 
-## Scripts
+Otros: `pnpm build`, `pnpm start`, `pnpm lint`.
 
-| Comando      | Descripción                       |
-| ------------ | --------------------------------- |
-| `pnpm dev`   | Servidor de desarrollo            |
-| `pnpm build` | Build de producción               |
-| `pnpm start` | Sirve el build de producción      |
-| `pnpm lint`  | Corre ESLint 10 (flat config)     |
+## Trabajo en equipo
 
-## Variables de entorno
-
-Los archivos `.env*` están en `.gitignore`. Si el proyecto necesita variables, pedíselas al equipo y creá tu `.env.local`; no las subas al repo.
-
-## Flujo de trabajo
-
-- Corré `pnpm lint` antes de cada commit.
-- Si agregás o actualizás dependencias, commiteá también `pnpm-lock.yaml`.
+- Cada uno trabaja en su rama, `main` no se toca directo.
+- `pnpm lint` antes de pushear.
+- Si tocás dependencias, subí también `pnpm-lock.yaml`.
+- Los `.env*` no se suben, pasalos por privado.
